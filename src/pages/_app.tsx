@@ -1,13 +1,14 @@
-// pages/_app.tsx
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
-import Navbar from '@/components/navbar/Navbar';
+import Layout from '@/Layout/Layout';
+import 'tailwindcss/tailwind.css'; 
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Navbar />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

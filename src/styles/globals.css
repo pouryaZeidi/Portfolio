@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @keyframes typing {
   from {
     width: 0%;
@@ -22,4 +21,94 @@
 .hover\:typing-animation:hover {
   animation: typing 2s linear forwards; 
 }
+@keyframes grow-shrink {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
+
+.animate-grow-shrink {
+  animation: grow-shrink 2s infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 1s ease-out forwards;
+}
+@keyframes colorPulse {
+  0% {
+    color: white;
+  }
+  50% {
+    color: yellow;
+  }
+  100% {
+    color: white;
+  }
+}
+
+.dot {
+  font-size: 24px; 
+  animation: colorPulse 1.5s infinite; 
+}
+
+
+.perspective {
+  perspective: 1000px;
+}
+
+.flip-card {
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 20px rgba(252, 250, 250, 0.658);
+}
+
+.flip-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit; 
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.shadow-lg {
+  box-shadow: 22 50px 100px rgb(255, 255, 255); /* Light shadow to simulate 3D effect */
+}
+
+
 

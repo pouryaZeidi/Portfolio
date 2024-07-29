@@ -2,8 +2,11 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className=" bg-slate-400 flex justify-center items-center h-[100vh]">
-      <span className="font-gill  text-headline-big text-primaryTextColor">Footer</span>
+    <footer className="  flex  bg-slate-300  h-[700px]">
+      <div className=' m-9  font-gill text-[17px] sm:text-[25px] md:text-[42px] lg:text-[53px]  font-bold'>
+        <h2><span className='' >Connect</span> With Me</h2>
+        </div>
+      
     </footer>
   );
 }
